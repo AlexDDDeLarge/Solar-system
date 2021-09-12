@@ -1,0 +1,185 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: relative;
+	width: 560px;
+	height: 560px;
+	background-image: url(cosmos.jpg);
+	background-size: auto 100%;
+}
+
+/* Анимация источника света */
+
+@keyframes rotation {
+	100% {transform: rotate(360deg);}
+}
+
+.light-container {
+	position: relative;
+	top: 165px;
+
+	box-sizing: border-box;
+	width: 230px; /*270*/
+	height: 230px; /*270*/
+	padding: 5px;
+	margin: 0 165px;
+	border-radius: 50%;
+
+	/*background: lightgreen;*/
+
+	animation-name: rotation;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	/*animation-play-state: paused;*/
+}
+
+
+.light-container__bulb {
+	width: 20px;
+	height: 20px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background:
+	radial-gradient(circle at 35% 95%, rgba(255,255,255,0.01), rgba(0,0,0,1) 60%), url(mercury.jpg) 50%  50%;
+	background-size: 145%;
+}
+
+.light-container__ball {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	background: url(sun.jpg) 50%  50%;
+	background-size: 145%;
+}
+
+.planet-container-two {
+	position: absolute;
+	top: 110px;
+	left: 110px;
+	box-sizing: border-box;
+	width: 340px;
+	height: 340px;
+	padding: 0px;
+	border-radius: 50%;
+
+	/*background-color: lightblue;*/
+
+	animation-name: rotation;
+	animation-duration: 14s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	/*animation-play-state: paused;
+	animation-delay: 3s;*/
+}
+
+.planet-container-two__ball {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background:
+	radial-gradient(circle at 35% 95%, rgba(255,255,255,0.01), rgba(0,0,0,1) 60%), url(venus.png) 50%  50%;
+	background-size: 145%;
+}
+
+.planet-container-one {
+	position: absolute;
+	box-sizing: border-box;
+	width: 560px;
+	height: 560px;
+	padding: 20px;
+	border-radius: 50%;
+
+	/*background-color: lightyellow;*/
+
+	animation-name: rotation;
+	animation-duration: 24s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	/*animation-play-state: paused;
+	animation-delay: 6s;*/
+}
+
+.planet-container-one__ball {
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background:
+	radial-gradient(circle at 35% 90%, rgba(255,255,255,0.01), rgba(0,0,0,1) 60%),
+	url(earth.png) 50%  50%;
+	background-size: 145%;
+}
+
+.light-container__orbit {
+	z-index: -1;
+	position: absolute;
+	top: 5px;
+	left: 240px;
+	/*transform: translateX(-40px);*/
+	box-sizing: border-box;
+	width: 80px;
+	height: 80px;
+	
+	/*background-color: red;/*
+
+	/*transform: rotate(145deg);
+	transform-origin: 50% 50%;*/
+
+	animation-name: rotate_moon;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@keyframes rotate_moon {
+	100% {transform: rotate(360deg);
+		transform-origin: 50% 50%;}
+}
+
+.light-container__orbit__moon {
+	width: 10px;
+	height: 10px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: green;
+	background:
+	radial-gradient(circle at 35% 10%, rgba(255,255,255,0.01), rgba(0,0,0,1) 60%),
+	url(moon.png) 50%  50%;
+	background-size: 145%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.paused {
+	animation-play-state: paused;
+
+*/
